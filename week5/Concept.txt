@@ -1,0 +1,16 @@
+Race condition - is a condition when multiple threads are accessing 
+shared memory in undetermined order, and when at least one access 
+is for “write” i.e. modifying the memory content”.
+
+Mutex - is a program object that allows multiple program threads to share the same resource
+Ex2
+1. need to check wether the file is empty or not, and create the numbers file
+2. need to lock the process for eliminating the interruptions - in order to prevent race 
+3. turn on the loop for numbers
+4. read and find the last number in the file and add one and append it to the end
+See how much time will it take to occur race condition. And explain what was the critical region.
+5. unlock it - remove the lock file
+6. open another sh file in order to run it simultaneously(one in the foregraound 
+and one in the background) - run it on ubuntu
+
+
