@@ -1,0 +1,2 @@
+Five jobs are waiting to be run. Their expected run times are 9, 6, 3, 5, and X. In what order should they be run to minimize average response time if X > 9?
+Select one:  3, 5, 6, 9, X

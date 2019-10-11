@@ -1,0 +1,3 @@
+The signal() function does not (necessarily) block other signals from arriving while the current handler is executing;
+ sigaction() can block other signals until the current handler returns. 
+The signal() function (usually) resets the signal action back to SIG_DFL (default) for almost all signals.

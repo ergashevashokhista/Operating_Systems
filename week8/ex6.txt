@@ -1,0 +1,7 @@
+So think about a 16 bit address space. 
+Page size = 8 KB
+How many 8K chunks are there in it
+8KB = 2^13 B
+Offset = 13 bits(It takes 13 bits to describe 8K)
+# of virtual pages = 2^(16 – 13) =
+= 2^3 = # of entries in page table.
