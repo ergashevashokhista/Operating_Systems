@@ -4,5 +4,8 @@ Inodenumbers can be found with - $ stat filename / $ ls -i filename
 Creating a hard link - ln [original filename] [link name]
 Creating a soft link - ln  -s [original filename] [link name] 
 
-For detailed information go to the link: 
+For detailed information about permissions of file system go to the link: 
  https://kb.iu.edu/d/abdb
+ 
+Struct stat more information can be found in the link below:
+https://www.mkssoftware.com/docs/man5/struct_stat.5.asp#targetText=DESCRIPTION,on%20which%20the%20file%20resides.
