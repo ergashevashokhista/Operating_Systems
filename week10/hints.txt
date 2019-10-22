@@ -1,0 +1,8 @@
+
+For tracing the links to a file we need inodenumbers.
+Inodenumbers can be found with - $ stat filename / $ ls -i filename
+ Creating a hard link - ln [original filename] [link name]
+ Creating a soft link - ln  -s [original filename] [link name] 
+
+
+ https://kb.iu.edu/d/abdb

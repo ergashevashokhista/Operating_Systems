@@ -1,0 +1,8 @@
+    2  cd week9
+    3  touch file.txt
+    4  cd ..
+    5  cd week10
+    6  link ../week9/file.txt _ex2.txt
+    7  ls -i _ex2.txt
+    8  find ../week9/file.txt -inum 674205
+    9  find ../week9/file.txt -inum 674205 -exec rm {} \;

@@ -1,0 +1,11 @@
+   12  cat ex2.txt
+   13  touch _ex3.txt
+   14  ls -l _ex3.txt
+   15  chmod u+x _ex3.txt
+   16  chmod g+x _ex3.txt
+   17  chmod u-x _ex3.txt
+   18  chmod g-x _ex3.txt
+   19  chmod a-x  _ex3.txt
+   20  chmod 707 _ex3.txt
+   21  chmod 777 _ex3.txt
+   22  history 11 > ex3.txt
