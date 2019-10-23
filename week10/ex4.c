@@ -20,8 +20,8 @@ void searchDir(char *dir, int depth) {      //The function requires a string arg
             if (strcmp(".", entry->d_name) == 0 ||          // On success, zero is returned. On error, -1 is returned
                 strcmp("..", entry->d_name) == 0)
                 continue;
-            printf("%*s%s/\n", depth, "", entry->d_name);
-            searchDir(entry->d_name, depth + 4);
+            printf("%*s%s/\n", depth, "", entry->d_name);   // entry->d_name prints its name
+            searchDir(entry->d_name, depth + 4);            //Searches for the dir by entry name and shifts by 4 (pointer size) to the next
         } else {
             if (stat.st_nlink >= 2) {                           //checks whether hard link count is two or more
                 printf("%*s%s\n", depth, "", entry->d_name);        //print all file names that point to the file
@@ -34,6 +34,6 @@ void searchDir(char *dir, int depth) {      //The function requires a string arg
 
 int main() {
     printf("Directory scan ./:\n");
-    searchDir("/mdmxfry/CLionProjects/operating-systems/week10/", 0);
+    searchDir("/shokhista-insp/operating-systems/week10/", 0);
     exit(0);
 }
