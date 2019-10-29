@@ -1,0 +1,53 @@
+ls -l /dev
+/dev is the location of special or device files. It highlights everything as a file or a directory.
+
+
+ls -l /proc
+Proc file system is created on a fly when the system boots and dissolved when   when it shuts down.
+it gives useful information about the processes which are currently running, it is regarded as control 
+and information center of kernel.
+It also provides a communication medium between kernel and user space.
+
+ ioperm - set port input/output permissions
+    #include <sys/io.h>
+    int ioperm(unsigned long from, unsigned long num, int turn_on);
+    ioperm() sets the port access permission bits for the calling thread
+        for num bits starting from port address from.  If turn_on is nonzero,
+        then permission for the specified bits is enabled; otherwise it is
+        disabled. 
+        Use the level argument 3 (i.e., iopl(3)) to give your program access to all I/O ports 
+        (so be careful --- accessing the wrong ports can do all sorts of nasty things to your computer).
+        Again, you need root privileges to call iopl(). See the iopl(2) manual page for details.
+        On success, zero is returned.  On error, -1 is returned, and errno is
+        set appropriately.
+
+iopl()  changes the I/O privilege level of the calling process, as
+        specified by the two least significant bits in level.
+        int iopl(int level);
+ioperm() can only give access to ports 0x000 through 0x3ff; for higher ports, 
+        you need to use iopl() (which gives you access to all ports at once). 
+
+mmap() creates a new mapping in the virtual address space of the
+       calling process.  The starting address for the new mapping is
+       specified in addr.  The length argument specifies the length of the
+       mapping (which must be greater than 0).
+        #include <sys/mman.h>
+
+       If addr is NULL, then the kernel chooses the (page-aligned) address
+       at which to create the mapping; this is the most portable method of
+       creating a new mapping.  If addr is not NULL, then the kernel takes
+       it as a hint about where to place the mapping; on Linux, the kernel
+       will pick a nearby page boundary (but always above or equal to the
+       value specified by /proc/sys/vm/mmap_min_addr) and attempt to create
+       the mapping there.  If another mapping already exists there, the
+       kernel picks a new address that may or may not depend on the hint.
+       The address of the new mapping is returned as the result of the call. 
+       http://man7.org/linux/man-pages/man2/mmap.2.html
+
+       munmap() - deletes the mappings for the specified
+       address range, and causes further references to addresses within the
+       range to generate invalid memory references. 
+
+Direct memory access (DMA)- is a method that allows an input/output (I/O) device
+to send or receive data directly to or from the main memory, bypassing the CPU to 
+speed up memory operations. The process is managed by a chip known as a DMA controller.
