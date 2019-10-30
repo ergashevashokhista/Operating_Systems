@@ -1,3 +1,14 @@
+Block devices - is one that stores information in fixed-size blocks, each one wuth its own address.
+              - common block sites range from 512 to 65536 bytes.
+              - all tranfserd are in units of one/more entire bloks.
+              - it is possible to read/write each block independently of other ones.
+              - hard disks, blu-ray disks, usb sticks are common block devices.
+Character devices - deliver/accept a stream of characters without regard to any block structure.
+                  - it is not addressable and does not have any seek operation.
+                  - printers, network interfaces, not disk-like devices are character devices.
+Clocks, memory mapped screen, touch screen do not belong to any of these devices, but most of the devices 
+can be devided into 2 categories.
+
 ls -l /dev
 /dev is the location of special or device files. It highlights everything as a file or a directory.
 
