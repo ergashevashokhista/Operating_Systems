@@ -3,5 +3,14 @@ Mount(attached) - gives us a information about what filesystems are currently in
 <command - $ mount>
 umount - is used for detacheing the devices from the Tree.
 
+-everything in virtual filesystem is like a file
+- when the program tries to perform some operation, the filesystem driver answers the request like with file.
+
+In order to perform the operation of recording and playing recorded files 
+u need to be in root
+<sudo -s>
+<[sudo] password:>
+If u are in root then u will have # instead of $
+
 
 
