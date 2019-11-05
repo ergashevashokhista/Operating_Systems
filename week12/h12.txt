@@ -1,0 +1,7 @@
+All files in Linux are arranged around a big tree rooted at '/'.First we need to mount the parent directory shoudl be mounted then others can be mounted manually or with mount command.
+Mount(attached) - gives us a information about what filesystems are currently in use. 
+<command - $ mount>
+umount - is used for detacheing the devices from the Tree.
+
+
+
