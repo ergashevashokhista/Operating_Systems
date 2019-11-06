@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <getopt.h>  //function parses the command-line arguments.
+#include <getopt.h>  //function parses(text to in-memory model) the command-line arguments.
 
 static int append_mode = 0;
 
 int parse_args(int argc, char *argv[])
 {
 	char c;
-	while ((c = getopt(argc, argv, "a")) != -1) {
+	while ((c = getopt(argc, argv, "a")) != -1) {   //‘-1’ if there are no more options to process.
 		switch (c) {
 		case 'a':
 			append_mode = 1;
 			break;
-		case '?':
+		case '?':   //‘?’ when there is an unrecognized option and it stores into external variable optopt.
 			if (isprint(optopt))
 				fprintf(stderr, "Unkonw option `-%c'.\n", optopt);
 			else
