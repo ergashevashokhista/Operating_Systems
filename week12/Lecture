@@ -1,0 +1,6 @@
+We have devices where buffering is not possible. 
+stdout - buffered way
+stderr - not buffered
+
+virtual finction is when the behavior of the code is defined while runtime.
+
