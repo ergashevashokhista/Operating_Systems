@@ -12,5 +12,10 @@ u need to be in root
 <[sudo] password:>
 If u are in root then u will have # instead of $
 
+tty- stands for TeleType - the first device acting like a terminal for Unix system.
+all the konsole, xterm, PuTTy and etc graphical programms are shell prompt emulators, cause they copy a dumb terminal.
+if u type <echo hi > /dev/tty> it will just output "hi"
+
+tee - reads and writes to standart input and output respectively and to files.
 
 
