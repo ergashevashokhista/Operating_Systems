@@ -1,0 +1,27 @@
+with buffer = 8
+real	0m0,004s
+user	0m0,001s
+sys	0m0,004s
+
+with buffer default
+real	0m0,004s
+user	0m0,000s
+sys	0m0,004s
+
+with buffer = 12
+real	0m0,003s
+user	0m0,001s
+sys	0m0,003s
+
+
+with buffer = 52410
+real	0m0,003s
+user	0m0,002s
+sys	0m0,001s
+
+with buffer = 1
+real	0m0,003s
+user	0m0,001s
+sys	0m0,002s
+
+
